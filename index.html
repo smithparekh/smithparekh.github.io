@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Smith Parekh — Portfolio</title>
+<meta name="description" content="Smith Parekh — Data Analyst | BI & Analytics Engineering | Applied AI & Automation">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<style>
+:root{
+  --bg:#0E1116; --surface:#12151A; --surface2:#161B22; --border:#232830; --border2:#262B33;
+  --text:#F2F0EA; --text2:#D8DCE1; --text3:#B7BFC9; --text4:#9AA3AF; --text5:#6B7280; --text6:#4B5460;
+  --accent:#E0954D; --accent-soft:rgba(224,149,77,0.12); --accent-border:rgba(224,149,77,0.55);
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{margin:0;background:var(--bg);color:var(--text);font-family:'IBM Plex Sans',sans-serif;-webkit-font-smoothing:antialiased;}
+h1,h2,h3,.display{font-family:'Fraunces',serif;margin:0;}
+a{color:inherit;text-decoration:none;}
+section{scroll-margin-top:92px;max-width:1080px;margin:0 auto;padding:48px 24px;border-top:1px solid #1B2028;}
+#hero{padding:72px 24px 64px;border-top:none;}
+.link-hover:hover{opacity:0.72;}
+.btn-hover:hover{filter:brightness(1.08);}
+.card-hover{transition:transform .16s ease, box-shadow .16s ease, border-color .16s ease;}
+.card-hover:hover{transform:translateY(-4px);box-shadow:0 12px 28px rgba(0,0,0,0.38);border-color:#3A424D;}
+.nav-a{font-size:14px;color:var(--text4);}
+.nav-a:hover{color:var(--text);}
+.chip{display:inline-block;padding:5px 12px;border-radius:999px;font-size:12.5px;background:#1B2028;border:1px solid #2A303A;color:var(--text3);}
+.chip-sm{font-size:11.5px;padding:3px 10px;}
+::selection{background:var(--accent);color:var(--bg);}
+.icon-btn{width:42px;height:42px;border-radius:10px;background:var(--surface2);border:1px solid var(--border2);display:flex;align-items:center;justify-content:center;color:var(--text);}
+.persona-toggle{display:inline-flex;padding:4px;border-radius:999px;border:1px solid var(--border2);background:#12151A;margin-bottom:32px;}
+.persona-btn{padding:9px 18px;border-radius:999px;font-size:13.5px;font-weight:500;cursor:pointer;font-family:'IBM Plex Sans',sans-serif;border:1px solid transparent;background:transparent;color:var(--text4);}
+.persona-btn.active{background:var(--accent);color:var(--bg);border-color:var(--accent);}
+.resume-btn{background:var(--accent);color:var(--bg);display:flex;align-items:center;gap:8px;padding:9px 16px;border-radius:8px;font-size:13.5px;font-weight:500;white-space:nowrap;}
+.skill-card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:20px;transition:background .2s ease, border-color .2s ease;}
+.skill-card.hi{background:var(--accent-soft);border-color:var(--accent-border);}
+.skill-card-title{font-size:14.5px;font-weight:600;margin-bottom:12px;color:var(--text);transition:color .2s ease;}
+.skill-card.hi .skill-card-title{color:var(--accent);}
+.accent-text{color:var(--accent);}
+section-title{display:block;font-size:14px;text-transform:uppercase;letter-spacing:1.5px;color:var(--text5);margin-bottom:28px;}
+</style>
+</head>
+<body data-persona="bi">
+
+<div style="position:sticky;top:0;z-index:20;backdrop-filter:blur(10px);background:rgba(14,17,22,0.82);border-bottom:1px solid #1E232B;">
+  <div style="max-width:1080px;margin:0 auto;padding:16px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px;">
+    <a href="#hero" style="font-family:'Fraunces',serif;font-weight:600;font-size:18px;letter-spacing:0.3px;">Smith Parekh</a>
+    <div style="display:flex;align-items:center;gap:22px;">
+      <a class="nav-a" href="#skills">Skills</a>
+      <a class="nav-a" href="#experience">Experience</a>
+      <a class="nav-a" href="#projects">Projects</a>
+      <a class="nav-a" href="#contact">Contact</a>
+    </div>
+    <a id="nav-resume" href="resume-bi.pdf" target="_blank" rel="noopener" aria-label="Download resume" class="btn-hover resume-btn">
+      <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6"/><path d="M9 13h6M9 17h6M9 9h2"/></svg>
+      <span>Resume</span>
+    </a>
+  </div>
+</div>
+
+<section id="hero">
+  <div class="persona-toggle">
+    <button class="persona-btn active" id="btn-bi" onclick="setPersona('bi')">Data &amp; BI Analyst</button>
+    <button class="persona-btn" id="btn-ai" onclick="setPersona('ai')">AI Automation Engineer</button>
+  </div>
+
+  <h1 class="display" style="font-size:56px;line-height:1.05;font-weight:600;margin-bottom:14px;">Smith Parekh</h1>
+  <div id="hero-title" class="accent-text" style="font-size:22px;font-weight:500;margin-bottom:16px;">Business Intelligence &amp; Analytics Engineering</div>
+  <div id="hero-tagline" style="font-size:17px;line-height:1.6;color:var(--text3);max-width:640px;margin-bottom:28px;">Turning raw, multi-source data into revenue and growth decisions using SQL, Python, executive dashboards, and modern data warehousing.</div>
+
+  <div style="display:flex;flex-wrap:wrap;gap:10px;margin-bottom:32px;">
+    <span class="chip">4.4+ Years Experience</span>
+    <span class="chip">Mumbai, India</span>
+    <span class="chip" style="display:flex;align-items:center;gap:6px;"><span style="width:7px;height:7px;border-radius:50%;background:#4FBFAE;display:inline-block;"></span>Open to opportunities</span>
+  </div>
+
+  <div style="display:flex;gap:14px;">
+    <a href="mailto:smithparekh107@gmail.com" aria-label="Email Smith Parekh" class="link-hover icon-btn">
+      <svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+    </a>
+    <a href="https://www.linkedin.com/in/smith-parekh" target="_blank" rel="noopener" aria-label="LinkedIn profile" class="link-hover icon-btn">
+      <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>
+    </a>
+    <a href="https://github.com/smithparekh" target="_blank" rel="noopener" aria-label="GitHub profile" class="link-hover icon-btn">
+      <svg viewBox="0 0 24 24" width="19" height="19" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56 0-.27-.01-1.16-.02-2.11-3.2.7-3.88-1.36-3.88-1.36-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.71.08-.71 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.71 1.26 3.37.96.1-.75.4-1.26.73-1.55-2.55-.29-5.23-1.28-5.23-5.7 0-1.26.45-2.29 1.19-3.09-.12-.29-.52-1.48.11-3.09 0 0 .97-.31 3.18 1.18a11.1 11.1 0 0 1 2.9-.39c.98 0 1.97.13 2.9.39 2.2-1.49 3.17-1.18 3.17-1.18.63 1.61.23 2.8.11 3.09.74.8 1.19 1.83 1.19 3.09 0 4.43-2.69 5.41-5.25 5.69.41.36.78 1.06.78 2.15 0 1.55-.01 2.8-.01 3.18 0 .31.21.68.8.56C20.71 21.39 24 17.08 24 12c0-6.27-5.23-11.5-12-11.5z"/></svg>
+    </a>
+  </div>
+</section>
+
+<section id="about">
+  <span class="section-title">About</span>
+  <div style="font-size:19px;line-height:1.7;color:var(--text2);max-width:760px;">Data Analyst with 4.4+ years turning raw, multi-source data into revenue and growth decisions across performance marketing and fintech. Works across the full stack — SQL and Python analysis, executive BI dashboards, dimensional data modeling on modern warehouses, and applied AI systems that automate real operational work. Most interested in the moment a dashboard or a workflow actually changes what someone decides to do next.</div>
+</section>
+
+<section id="skills">
+  <span class="section-title" style="margin-bottom:6px;">Skills &amp; Technologies</span>
+  <div style="font-size:14px;color:var(--text5);margin-bottom:28px;">Highlighted cards shift with the toggle above — showing where each side of the profile runs deepest.</div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:14px;">
+    <div class="skill-card hi" data-personas="bi ai">
+      <div class="skill-card-title">Languages &amp; Query</div>
+      <div style="display:flex;flex-wrap:wrap;gap:7px;">
+        <span class="chip">Python (Pandas, NumPy)</span><span class="chip">SQL</span><span class="chip">DAX</span><span class="chip">Power Query (M)</span>
+      </div>
+    </div>
+    <div class="skill-card hi" data-personas="bi">
+      <div class="skill-card-title">Data Warehousing &amp; Modeling</div>
+      <div style="display:flex;flex-wrap:wrap;gap:7px;">
+        <span class="chip">Snowflake</span><span class="chip">ClickHouse</span><span class="chip">PostgreSQL</span><span class="chip">MySQL</span><span class="chip">SQL Server</span><span class="chip">dbt</span><span class="chip">Star Schema</span><span class="chip">ETL Pipelines</span>
+      </div>
+    </div>
+    <div class="skill-card hi" data-personas="bi">
+      <div class="skill-card-title">BI &amp; Visualization</div>
+      <div style="display:flex;flex-wrap:wrap;gap:7px;">
+        <span class="chip">Power BI</span><span class="chip">Metabase</span><span class="chip">Tableau</span><span class="chip">Excel</span><span class="chip">Dashboard Development</span><span class="chip">Data Storytelling</span>
+      </div>
+    </div>
+    <div class="skill-card hi" data-personas="bi">
+      <div class="skill-card-title">Analytics Methods</div>
+      <div style="display:flex;flex-wrap:wrap;gap:7px;">
+        <span class="chip">Cohort Analysis</span><span class="chip">Funnel &amp; Attribution</span><span class="chip">A/B Testing</span><span class="chip">Retention &amp; Churn</span><span class="chip">RFM Segmentation</span><span class="chip">Trend Analysis</span>
+      </div>
+    </div>
+    <div class="skill-card" data-personas="ai">
+      <div class="skill-card-title">AI, ML &amp; Automation</div>
+      <div style="display:flex;flex-wrap:wrap;gap:7px;">
+        <span class="chip">LangChain</span><span class="chip">LangGraph</span><span class="chip">OpenAI API</span><span class="chip">Groq API</span><span class="chip">RAG</span><span class="chip">Qdrant</span><span class="chip">FAISS</span><span class="chip">AWS Fraud Detector</span>
+      </div>
+    </div>
+    <div class="skill-card" data-personas="ai">
+      <div class="skill-card-title">Automation &amp; Workflow</div>
+      <div style="display:flex;flex-wrap:wrap;gap:7px;">
+        <span class="chip">n8n</span><span class="chip">Zapier</span><span class="chip">MCP</span><span class="chip">AWS Lambda</span><span class="chip">REST APIs</span>
+      </div>
+    </div>
+    <div class="skill-card hi" data-personas="bi ai">
+      <div class="skill-card-title">Cloud &amp; Tools</div>
+      <div style="display:flex;flex-wrap:wrap;gap:7px;">
+        <span class="chip">AWS (Lambda, S3)</span><span class="chip">Git</span><span class="chip">Jira</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="experience">
+  <span class="section-title">Experience</span>
+  <div style="margin-bottom:36px;padding-bottom:36px;border-bottom:1px solid #1B2028;">
+    <div style="display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:8px;margin-bottom:12px;">
+      <div style="font-size:19px;font-weight:600;font-family:'Fraunces',serif;">Data Analyst — ParityCube</div>
+      <div style="font-size:13.5px;color:var(--text5);">Dec 2024 — Present</div>
+    </div>
+    <ul style="margin:0;padding-left:20px;display:flex;flex-direction:column;gap:9px;">
+      <li style="font-size:15px;line-height:1.6;color:#C7CCD3;">Own 3 executive BI dashboards (Metabase / Power BI on PostgreSQL and ClickHouse) across three affiliate platforms, tracking 6.8M+ transactions; cohort, funnel, and trend analysis drove a 10 to 14 percent profit-margin improvement over 3 fiscal years at 83 to 93 percent data-validation accuracy.</li>
+      <li style="font-size:15px;line-height:1.6;color:#C7CCD3;">Built a cross-platform campaign comparison tool in ClickHouse using templated dual date-window filters and conditional aggregation for flexible period-over-period analysis of GMV, commission, and conversion rate.</li>
+      <li style="font-size:15px;line-height:1.6;color:#C7CCD3;">Designed a multi-product executive dashboard unifying gift cards, prepaid cards, cashback, and affiliate revenue across 8+ source tables, with self-serve tools surfacing top gaining and declining campaigns.</li>
+      <li style="font-size:15px;line-height:1.6;color:#C7CCD3;">Built a self-learning RAG deal-category classifier (Qdrant, OpenAI embeddings) processing about 1,000 deals a day, with an autonomous LLM fallback that writes back to the vector store, eliminating manual categorization.</li>
+      <li style="font-size:15px;line-height:1.6;color:#C7CCD3;">Deployed an AWS Fraud Detector model with custom mobile-number enrichment features, cutting fraudulent transactions 80 percent and manual review 90 percent.</li>
+      <li style="font-size:15px;line-height:1.6;color:#C7CCD3;">Automated finance and operations workflows with n8n and Zapier, and built an MCP server letting non-technical teams self-serve campaign reports via plain-English prompts.</li>
+    </ul>
+  </div>
+  <div>
+    <div style="display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:8px;margin-bottom:12px;">
+      <div style="font-size:19px;font-weight:600;font-family:'Fraunces',serif;">Data Analyst — Fin Rise Softech</div>
+      <div style="font-size:13.5px;color:var(--text5);">Jun 2022 — Nov 2024</div>
+    </div>
+    <ul style="margin:0;padding-left:20px;display:flex;flex-direction:column;gap:9px;">
+      <li style="font-size:15px;line-height:1.6;color:#C7CCD3;">Built and maintained a Power BI risk-monitoring dashboard across 200+ client portfolios, improving data accuracy 25 percent and reducing risk exposure 30 percent.</li>
+      <li style="font-size:15px;line-height:1.6;color:#C7CCD3;">Contributed to database schema and data-model design for a Risk Management System, improving system performance 15 percent.</li>
+      <li style="font-size:15px;line-height:1.6;color:#C7CCD3;">Wrote and optimized SQL queries and stored procedures on SQL Server, cutting query execution time 10 percent and eliminating production deadlocks.</li>
+      <li style="font-size:15px;line-height:1.6;color:#C7CCD3;">Applied regression and pattern-recognition analysis on trade data, enabling strategic adjustments to client trading models.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="projects">
+  <span class="section-title">Featured Projects</span>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px;">
+    <a href="https://github.com/smithparekh/Affiliate-Revenue-Intelligence-Platform" target="_blank" rel="noopener" class="card-hover" style="display:block;padding:22px;border-radius:12px;background:var(--surface);border:1px solid var(--border);">
+      <div style="display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:10px;">
+        <div style="font-size:16px;font-weight:600;font-family:'Fraunces',serif;">Affiliate Revenue Intelligence Platform</div>
+        <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="#6B7280" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex-shrink:0;"><path d="M7 17L17 7M9 7h8v8"/></svg>
+      </div>
+      <div style="font-size:14px;line-height:1.55;color:var(--text4);margin-bottom:14px;min-height:66px;">Production-style analytics engineering platform on Snowflake and dbt: 18 tested models, 150 dbt tests, 0 failures, with full lineage documentation.</div>
+      <div style="display:flex;flex-wrap:wrap;gap:6px;"><span class="chip chip-sm">Snowflake</span><span class="chip chip-sm">dbt</span><span class="chip chip-sm">SQL</span></div>
+    </a>
+    <a href="https://github.com/smithparekh/resume-ai" target="_blank" rel="noopener" class="card-hover" style="display:block;padding:22px;border-radius:12px;background:var(--surface);border:1px solid var(--border);">
+      <div style="display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:10px;">
+        <div style="font-size:16px;font-weight:600;font-family:'Fraunces',serif;">AI Job Application Copilot</div>
+        <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="#6B7280" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex-shrink:0;"><path d="M7 17L17 7M9 7h8v8"/></svg>
+      </div>
+      <div style="font-size:14px;line-height:1.55;color:var(--text4);margin-bottom:14px;min-height:66px;">Groq LLaMA-3.3-70B powered resume analyzer with match scoring and keyword-gap detection, plus an autonomous scanner across 9 job boards.</div>
+      <div style="display:flex;flex-wrap:wrap;gap:6px;"><span class="chip chip-sm">Python</span><span class="chip chip-sm">Groq API</span><span class="chip chip-sm">Streamlit</span></div>
+    </a>
+    <a href="https://github.com/smithparekh/Resume-ATS-Agent-" target="_blank" rel="noopener" class="card-hover" style="display:block;padding:22px;border-radius:12px;background:var(--surface);border:1px solid var(--border);">
+      <div style="display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:10px;">
+        <div style="font-size:16px;font-weight:600;font-family:'Fraunces',serif;">Resume ATS Agent</div>
+        <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="#6B7280" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex-shrink:0;"><path d="M7 17L17 7M9 7h8v8"/></svg>
+      </div>
+      <div style="font-size:14px;line-height:1.55;color:var(--text4);margin-bottom:14px;min-height:66px;">Multi-agent ATS resume optimizer: 4 CrewAI agents rewrite and score a resume against any job description.</div>
+      <div style="display:flex;flex-wrap:wrap;gap:6px;"><span class="chip chip-sm">CrewAI</span><span class="chip chip-sm">OpenAI</span><span class="chip chip-sm">Multi-Agent</span></div>
+    </a>
+    <a href="https://github.com/smithparekh/medicare-ai-assistant" target="_blank" rel="noopener" class="card-hover" style="display:block;padding:22px;border-radius:12px;background:var(--surface);border:1px solid var(--border);">
+      <div style="display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:10px;">
+        <div style="font-size:16px;font-weight:600;font-family:'Fraunces',serif;">Medicare AI Assistant</div>
+        <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="#6B7280" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex-shrink:0;"><path d="M7 17L17 7M9 7h8v8"/></svg>
+      </div>
+      <div style="font-size:14px;line-height:1.55;color:var(--text4);margin-bottom:14px;min-height:66px;">RAG chatbot for medical PDFs, answering natural-language questions about any uploaded document.</div>
+      <div style="display:flex;flex-wrap:wrap;gap:6px;"><span class="chip chip-sm">LangChain</span><span class="chip chip-sm">FAISS</span><span class="chip chip-sm">RAG</span></div>
+    </a>
+    <a href="https://github.com/smithparekh/Retail-Analysis" target="_blank" rel="noopener" class="card-hover" style="display:block;padding:22px;border-radius:12px;background:var(--surface);border:1px solid var(--border);">
+      <div style="display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:10px;">
+        <div style="font-size:16px;font-weight:600;font-family:'Fraunces',serif;">Retail Analysis</div>
+        <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="#6B7280" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex-shrink:0;"><path d="M7 17L17 7M9 7h8v8"/></svg>
+      </div>
+      <div style="font-size:14px;line-height:1.55;color:var(--text4);margin-bottom:14px;min-height:66px;">End-to-end retail pipeline: Amazon S3 to Snowflake (AUTO_INGEST) to Power BI, with FMCG campaign analytics.</div>
+      <div style="display:flex;flex-wrap:wrap;gap:6px;"><span class="chip chip-sm">Snowflake</span><span class="chip chip-sm">AWS S3</span><span class="chip chip-sm">Power BI</span></div>
+    </a>
+    <a href="https://github.com/smithparekh/POwer-BI-Dashboards" target="_blank" rel="noopener" class="card-hover" style="display:block;padding:22px;border-radius:12px;background:var(--surface);border:1px solid var(--border);">
+      <div style="display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:10px;">
+        <div style="font-size:16px;font-weight:600;font-family:'Fraunces',serif;">Power BI Dashboards</div>
+        <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="#6B7280" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex-shrink:0;"><path d="M7 17L17 7M9 7h8v8"/></svg>
+      </div>
+      <div style="font-size:14px;line-height:1.55;color:var(--text4);margin-bottom:14px;min-height:66px;">A collection of Power BI dashboards spanning sales performance, risk monitoring, and business analytics.</div>
+      <div style="display:flex;flex-wrap:wrap;gap:6px;"><span class="chip chip-sm">Power BI</span><span class="chip chip-sm">DAX</span></div>
+    </a>
+  </div>
+  <div style="margin-top:22px;">
+    <a href="https://github.com/smithparekh?tab=repositories" target="_blank" rel="noopener" class="link-hover accent-text" style="font-size:14px;display:inline-flex;align-items:center;gap:6px;">
+      View all 24 repositories on GitHub
+      <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg>
+    </a>
+  </div>
+</section>
+
+<section id="certifications">
+  <span class="section-title">Certifications</span>
+  <div style="display:flex;flex-direction:column;gap:12px;">
+    <div style="display:flex;align-items:baseline;justify-content:space-between;gap:12px;padding:14px 0;border-bottom:1px solid #1B2028;">
+      <div style="font-size:15px;color:var(--text2);">Oracle Cloud Infrastructure 2024 — Generative AI Certified Professional</div>
+      <div style="font-size:13px;color:var(--text5);white-space:nowrap;">Oracle · 2024</div>
+    </div>
+    <div style="display:flex;align-items:baseline;justify-content:space-between;gap:12px;padding:14px 0;border-bottom:1px solid #1B2028;">
+      <div style="font-size:15px;color:var(--text2);">Google Data Analytics Professional Certificate</div>
+      <div style="font-size:13px;color:var(--text5);white-space:nowrap;">Coursera · 2022</div>
+    </div>
+    <div style="display:flex;align-items:baseline;justify-content:space-between;gap:12px;padding:14px 0;border-bottom:1px solid #1B2028;">
+      <div style="font-size:15px;color:var(--text2);">Advanced SQL, SQL (Intermediate), SQL (Basic)</div>
+      <div style="font-size:13px;color:var(--text5);white-space:nowrap;">HackerRank</div>
+    </div>
+    <div style="display:flex;align-items:baseline;justify-content:space-between;gap:12px;padding:14px 0;border-bottom:1px solid #1B2028;">
+      <div style="font-size:15px;color:var(--text2);">SQL for Data Science</div>
+      <div style="font-size:13px;color:var(--text5);white-space:nowrap;">Coursera · 2021</div>
+    </div>
+    <div style="display:flex;align-items:baseline;justify-content:space-between;gap:12px;padding:14px 0;border-bottom:1px solid #1B2028;">
+      <div style="font-size:15px;color:var(--text2);">Deep Learning</div>
+      <div style="font-size:13px;color:var(--text5);white-space:nowrap;">Udemy · 2021</div>
+    </div>
+    <div style="display:flex;align-items:baseline;justify-content:space-between;gap:12px;padding:14px 0;border-bottom:1px solid #1B2028;">
+      <div style="font-size:15px;color:var(--text2);">IBM Data Analysis with Python</div>
+      <div style="font-size:13px;color:var(--text5);white-space:nowrap;">Cognitive Class · 2020</div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" style="padding:80px 24px 96px;text-align:center;">
+  <h2 class="display" style="font-size:34px;font-weight:600;margin-bottom:14px;">Let's build something great.</h2>
+  <div style="font-size:16px;color:var(--text4);margin-bottom:32px;">Open to Data Analyst, BI, Analytics Engineering, and AI Automation roles.</div>
+  <div style="display:flex;gap:14px;justify-content:center;margin-bottom:36px;">
+    <a href="mailto:smithparekh107@gmail.com" aria-label="Email Smith Parekh" class="link-hover icon-btn" style="width:44px;height:44px;">
+      <svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+    </a>
+    <a href="https://www.linkedin.com/in/smith-parekh" target="_blank" rel="noopener" aria-label="LinkedIn profile" class="link-hover icon-btn" style="width:44px;height:44px;">
+      <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>
+    </a>
+    <a href="https://github.com/smithparekh" target="_blank" rel="noopener" aria-label="GitHub profile" class="link-hover icon-btn" style="width:44px;height:44px;">
+      <svg viewBox="0 0 24 24" width="19" height="19" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56 0-.27-.01-1.16-.02-2.11-3.2.7-3.88-1.36-3.88-1.36-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.71.08-.71 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.71 1.26 3.37.96.1-.75.4-1.26.73-1.55-2.55-.29-5.23-1.28-5.23-5.7 0-1.26.45-2.29 1.19-3.09-.12-.29-.52-1.48.11-3.09 0 0 .97-.31 3.18 1.18a11.1 11.1 0 0 1 2.9-.39c.98 0 1.97.13 2.9.39 2.2-1.49 3.17-1.18 3.17-1.18.63 1.61.23 2.8.11 3.09.74.8 1.19 1.83 1.19 3.09 0 4.43-2.69 5.41-5.25 5.69.41.36.78 1.06.78 2.15 0 1.55-.01 2.8-.01 3.18 0 .31.21.68.8.56C20.71 21.39 24 17.08 24 12c0-6.27-5.23-11.5-12-11.5z"/></svg>
+    </a>
+    <a id="footer-resume" href="resume-bi.pdf" target="_blank" rel="noopener" aria-label="Download resume" class="btn-hover resume-btn" style="height:44px;">
+      <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6"/><path d="M9 13h6M9 17h6M9 9h2"/></svg>
+      <span id="footer-resume-label">Data &amp; BI Resume</span>
+    </a>
+  </div>
+  <div style="font-size:13px;color:var(--text6);">Smith Parekh · Mumbai, India · smithparekh107@gmail.com</div>
+</section>
+
+<script>
+function setPersona(p){
+  document.body.dataset.persona = p;
+  var isBI = p === 'bi';
+  var accent = isBI ? '#E0954D' : '#4FBFAE';
+  var accentSoft = isBI ? 'rgba(224,149,77,0.12)' : 'rgba(79,191,174,0.12)';
+  var accentBorder = isBI ? 'rgba(224,149,77,0.55)' : 'rgba(79,191,174,0.55)';
+  document.documentElement.style.setProperty('--accent', accent);
+  document.documentElement.style.setProperty('--accent-soft', accentSoft);
+  document.documentElement.style.setProperty('--accent-border', accentBorder);
+
+  document.getElementById('btn-bi').classList.toggle('active', isBI);
+  document.getElementById('btn-ai').classList.toggle('active', !isBI);
+
+  document.getElementById('hero-title').textContent = isBI
+    ? 'Business Intelligence & Analytics Engineering'
+    : 'AI Engineering & Automation';
+  document.getElementById('hero-tagline').textContent = isBI
+    ? 'Turning raw, multi-source data into revenue and growth decisions using SQL, Python, executive dashboards, and modern data warehousing.'
+    : 'Building production AI and automation systems: agentic classification pipelines, fraud-detection ML, and workflow automation.';
+
+  var resumeHref = isBI ? 'resume-bi.pdf' : 'resume-ai.pdf';
+  var resumeLabel = isBI ? 'Data & BI Resume' : 'AI Engineer Resume';
+  document.getElementById('nav-resume').setAttribute('href', resumeHref);
+  document.getElementById('footer-resume').setAttribute('href', resumeHref);
+  document.getElementById('footer-resume-label').textContent = resumeLabel;
+
+  document.querySelectorAll('.skill-card').forEach(function(card){
+    var personas = (card.dataset.personas || '').split(' ');
+    card.classList.toggle('hi', personas.indexOf(p) !== -1);
+  });
+}
+</script>
+</body>
+</html>
